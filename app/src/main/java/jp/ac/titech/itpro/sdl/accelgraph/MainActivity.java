@@ -46,7 +46,7 @@ public class MainActivity extends Activity implements SensorEventListener {
         sensorMgr = (SensorManager) getSystemService(SENSOR_SERVICE);
         light = sensorMgr.getDefaultSensor(Sensor.TYPE_LIGHT);
         if (light == null) {
-            Toast.makeText(this, "No light available",
+            Toast.makeText(this, getString(R.string.no_light_error),
                     Toast.LENGTH_SHORT).show();
             finish();
             return;
